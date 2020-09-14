@@ -46,10 +46,10 @@ def arrange():
                 s.Div_per_share = r.text
             elif (index == 6):
                 #print(r.text[:-1])
-                if (r.text[:-1].isnumeric() or r.text[:-1].strip() == ""):
+                if (r.text[:-1].isnumeric() or (r.text.strip())[:-1] == ""):
                     s.Yield = 0.00
                 else:
-                    s.Yield = float(r.text[:-1])
+                    s.Yield = float((r.text.strip())[:-1])
                 #print(len(listOfStonks))
                 #print("Yield: " + s.Yield)
             elif (index == 7):
